@@ -18,3 +18,8 @@ jobs:
             - run: npx nx format:check
             - run: npx nx affected -t lint --parallel=3
             - run: npx nx affected -t test --parallel=3 --configuration=ci
+
+            - name: Publish to Chromatic
+              uses: chromaui/action@v1
+              with:
+                  projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
