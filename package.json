@@ -18,6 +18,7 @@
         "@nx/storybook": "^16.5.3",
         "@nx/web": "16.5.3",
         "@nx/workspace": "16.5.3",
+        "@storybook/addon-designs": "^7.0.1",
         "@storybook/addon-essentials": "^7.0.24",
         "@storybook/core-common": "^7.0.24",
         "@storybook/core-server": "^7.0.24",
