@@ -3,6 +3,7 @@ import path from 'path';
 import { AliasOptions, mergeConfig } from 'vite';
 
 function mapTsconfigCompilerPathsToAlias() {
+    // eslint-disable-next-line
     const { paths } = require('../../../../../tsconfig.base.json').compilerOptions;
     const aliases: AliasOptions = {};
     Object.keys(paths).forEach((item) => {
