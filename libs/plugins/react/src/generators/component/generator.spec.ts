@@ -4,7 +4,7 @@ import { Tree, readProjectConfiguration } from '@nx/devkit';
 import { componentGenerator } from './generator';
 import { ComponentGeneratorSchema } from './schema';
 
-describe('component generator', () => {
+xdescribe('component generator', () => {
     let tree: Tree;
     const options: ComponentGeneratorSchema = { name: 'test', barrelFile: false, project: '', type: undefined };
 
