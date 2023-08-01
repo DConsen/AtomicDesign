@@ -3,13 +3,13 @@ import { NavigationLink, NavigationLinkProps } from '../../atoms';
 
 export interface NavigationListProps {
   links: NavigationLinkProps[];
-  mode: 'HORIZONTAL' | 'VERTICAL';
+  mode?: 'HORIZONTAL' | 'VERTICAL';
   className?: string;
 }
 
 export function NavigationList({ links, mode = 'HORIZONTAL', className }: NavigationListProps) {
   return (
-    <div className={classnames([className, 'flex', mode === 'HORIZONTAL' ? 'flex-row gap-x-4' : 'flex-col gap-y-2'])}>
+    <div className={classnames([className, 'flex', mode === 'HORIZONTAL' ? 'flex-row gap-x-8' : 'flex-col gap-y-2'])}>
       <>
         {links?.map((link) => (
           <NavigationLink {...link} />

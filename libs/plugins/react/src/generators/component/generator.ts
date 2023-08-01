@@ -11,10 +11,10 @@ export async function componentGenerator(tree: Tree, options: ComponentGenerator
     const typeBarrel = tree.exists(typeBarrelPath);
 
     if (!typeBarrel) {
-      tree.write(typeBarrelPath, `export * from './${options.name}`);
+      tree.write(typeBarrelPath, `export * from './${options.name}';`);
     } else {
       const contents = tree.read(typeBarrelPath).toString();
-      const newContents = contents + `export * from './${options.name}'`;
+      const newContents = contents + `export * from './${options.name}';`;
       tree.write(typeBarrelPath, newContents);
     }
 
