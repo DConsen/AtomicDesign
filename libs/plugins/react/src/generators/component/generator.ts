@@ -25,8 +25,12 @@ export async function componentGenerator(tree: Tree, options: ComponentGenerator
             tree.write(componentBarrelPath, `export * from './${options.type}`);
         } else {
             const contents = tree.read(componentBarrelPath).toString();
-            const newContents = contents + `export * from './${options.type}'`;
-            tree.write(componentBarrelPath, newContents);
+            const isNotExported = !contents.includes(`export * from './${options.type}'`);
+
+            if (isNotExported) {
+                const newContents = contents + `export * from './${options.type}'`;
+                tree.write(componentBarrelPath, newContents);
+            }
         }
     }
 

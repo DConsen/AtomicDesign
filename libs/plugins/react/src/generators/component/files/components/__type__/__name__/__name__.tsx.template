@@ -1,9 +1,11 @@
+import { classnames } from '@atomic-design/shared/utils';
+
 export interface <%= name %>Props {
     className?: string;
 }
 
 export function <%= name %>({ className }: <%= name %>Props) {
-    return <div className={className}><%= name %></div>;
+    return <div className={classnames([className])}><%= name %></div>;
 }
 
 export default <%= name %>;

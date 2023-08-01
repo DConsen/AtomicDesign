@@ -3,14 +3,12 @@ import { <%= name %> } from './<%= name %>';
 
 const Story: Meta<typeof <%= name %>> = {
     component: <%= name %>,
-    title: '<%= name %>',
+    title: 'Design System/<%= type.charAt(0).toUpperCase() + type.slice(1) %>/<%= name %>',
 };
 export default Story;
 
 export const Primary = {
-    args: {
-        className: '',
-    },
+    args: {},
     parameters: {
         design: {
             type: 'figma',

@@ -1,4 +1,17 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import path from 'path';
+import { AliasOptions, mergeConfig } from 'vite';
+
+function mapTsconfigCompilerPathsToAlias() {
+    const { paths } = require('../../../../../tsconfig.base.json').compilerOptions;
+    const aliases: AliasOptions = {};
+    Object.keys(paths).forEach((item) => {
+        const key = item.replace('/*', '');
+        const value = path.resolve(__dirname, '../../../../../' + paths[item][0].replace('/*', '').replace('*', ''));
+        aliases[key] = value;
+    });
+    return aliases;
+}
 
 const config: StorybookConfig = {
     stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
@@ -11,6 +24,16 @@ const config: StorybookConfig = {
                 viteConfigPath: '',
             },
         },
+    },
+    async viteFinal(config) {
+        // Merge custom configuration into the default config
+        return mergeConfig(config, {
+            resolve: {
+                alias: {
+                    ...mapTsconfigCompilerPathsToAlias(),
+                },
+            },
+        });
     },
 };
 

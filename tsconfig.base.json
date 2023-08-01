@@ -16,7 +16,8 @@
         "baseUrl": ".",
         "paths": {
             "@atomic-design/react": ["libs/plugins/react/src/index.ts"],
-            "@atomic-design/shared/react/ui": ["libs/shared/react/ui/src/index.ts"]
+            "@atomic-design/shared/react/ui": ["libs/shared/react/ui/src/index.ts"],
+            "@atomic-design/shared/utils": ["libs/shared/utils/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]
