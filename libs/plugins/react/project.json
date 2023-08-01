@@ -1,66 +1,66 @@
 {
-    "name": "plugins-react",
-    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "libs/plugins/react/src",
-    "projectType": "library",
-    "targets": {
-        "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/libs/plugins/react",
-                "main": "libs/plugins/react/src/index.ts",
-                "tsConfig": "libs/plugins/react/tsconfig.lib.json",
-                "assets": [
-                    "libs/plugins/react/*.md",
-                    {
-                        "input": "./libs/plugins/react/src",
-                        "glob": "**/!(*.ts)",
-                        "output": "./src"
-                    },
-                    {
-                        "input": "./libs/plugins/react/src",
-                        "glob": "**/*.d.ts",
-                        "output": "./src"
-                    },
-                    {
-                        "input": "./libs/plugins/react",
-                        "glob": "generators.json",
-                        "output": "."
-                    },
-                    {
-                        "input": "./libs/plugins/react",
-                        "glob": "executors.json",
-                        "output": "."
-                    }
-                ]
-            }
-        },
-        "lint": {
-            "executor": "@nx/linter:eslint",
-            "outputs": ["{options.outputFile}"],
-            "options": {
-                "lintFilePatterns": [
-                    "libs/plugins/react/**/*.ts",
-                    "libs/plugins/react/package.json",
-                    "libs/plugins/react/generators.json"
-                ]
-            }
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-            "options": {
-                "jestConfig": "libs/plugins/react/jest.config.ts",
-                "passWithNoTests": true
-            },
-            "configurations": {
-                "ci": {
-                    "ci": true,
-                    "codeCoverage": true
-                }
-            }
-        }
+  "name": "plugins-react",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/plugins/react/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/plugins/react",
+        "main": "libs/plugins/react/src/index.ts",
+        "tsConfig": "libs/plugins/react/tsconfig.lib.json",
+        "assets": [
+          "libs/plugins/react/*.md",
+          {
+            "input": "./libs/plugins/react/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/plugins/react/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/plugins/react",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./libs/plugins/react",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
     },
-    "tags": []
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/plugins/react/**/*.ts",
+          "libs/plugins/react/package.json",
+          "libs/plugins/react/generators.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/plugins/react/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
 }

@@ -5,7 +5,7 @@
 @config '../tailwind.config.js'
 
 * {
-    font-family: Sentient;
+  font-family: Sentient;
 }
 
 h1,
@@ -14,5 +14,5 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Oswald;
+  font-family: Oswald;
 }

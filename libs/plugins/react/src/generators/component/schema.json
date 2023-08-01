@@ -1,64 +1,64 @@
 {
-    "$schema": "http://json-schema.org/schema",
-    "$id": "Component",
-    "title": "",
-    "type": "object",
-    "properties": {
-        "project": {
-            "type": "string",
-            "description": "The project where the component will be located.",
-            "x-prompt": "What is the name of the project for this component?",
-            "x-dropdown": "projects"
-        },
-        "name": {
-            "type": "string",
-            "description": "",
-            "$default": {
-                "$source": "argv",
-                "index": 0
-            },
-            "x-prompt": "What name would you like to use for the component?"
-        },
-        "type": {
-            "type": "string",
-            "description": "",
-            "$default": {
-                "$source": "argv",
-                "index": 1
-            },
-            "x-prompt": {
-                "type": "list",
-                "message": "What type would you like to use?",
-                "items": [
-                    {
-                        "value": "atoms",
-                        "label": "Atom"
-                    },
-                    {
-                        "value": "molecules",
-                        "label": "Molecule"
-                    },
-                    {
-                        "value": "organisms",
-                        "label": "Organism"
-                    },
-                    {
-                        "value": "templates",
-                        "label": "Template"
-                    },
-                    {
-                        "value": "pages",
-                        "label": "Page"
-                    }
-                ]
-            }
-        },
-        "barrelFile": {
-            "type": "boolean",
-            "description": "",
-            "default": true,
-            "x-prompt": "Would you like to update/create barrel file(s)"
-        }
+  "$schema": "http://json-schema.org/schema",
+  "$id": "Component",
+  "title": "",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "The project where the component will be located.",
+      "x-prompt": "What is the name of the project for this component?",
+      "x-dropdown": "projects"
     },
-    "required": ["project", "name", "type"]
+    "name": {
+      "type": "string",
+      "description": "",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the component?"
+    },
+    "type": {
+      "type": "string",
+      "description": "",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": {
+        "type": "list",
+        "message": "What type would you like to use?",
+        "items": [
+          {
+            "value": "atoms",
+            "label": "Atom"
+          },
+          {
+            "value": "molecules",
+            "label": "Molecule"
+          },
+          {
+            "value": "organisms",
+            "label": "Organism"
+          },
+          {
+            "value": "templates",
+            "label": "Template"
+          },
+          {
+            "value": "pages",
+            "label": "Page"
+          }
+        ]
+      }
+    },
+    "barrelFile": {
+      "type": "boolean",
+      "description": "",
+      "default": true,
+      "x-prompt": "Would you like to update/create barrel file(s)"
+    }
+  },
+  "required": ["project", "name", "type"]
 }

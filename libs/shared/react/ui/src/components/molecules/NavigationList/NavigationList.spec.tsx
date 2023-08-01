@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Button from './Button';
+import NavigationList from './NavigationList';
 
-describe('Button', () => {
+describe('NavigationList', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Button label="mockLabel" />);
+    const { baseElement } = render(<NavigationList />);
     expect(baseElement).toBeTruthy();
   });
 });
