@@ -142,6 +142,12 @@ module.exports = {
       colors: {
         ...colorTokens,
       },
+      gridTemplateColumns: {
+        layout: 'auto 1fr auto',
+      },
+      gridTemplateRows: {
+        layout: 'auto 1fr auto',
+      },
     },
   },
   plugins: [],
