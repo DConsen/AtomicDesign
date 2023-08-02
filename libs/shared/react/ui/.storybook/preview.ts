@@ -1,6 +1,11 @@
 import './index.css';
 
 export const parameters = {
+  options: {
+    storySort: {
+      order: ['Tokens', 'Atoms', 'Molecules', 'Organisms', 'Templates', 'Pages'],
+    },
+  },
   viewport: {
     viewports: {
       desktop_1: {

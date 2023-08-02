@@ -15,7 +15,7 @@ function mapTsconfigCompilerPathsToAlias() {
 }
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-essentials', '@storybook/addon-designs'],
   staticDirs: ['../assets'],
   framework: {

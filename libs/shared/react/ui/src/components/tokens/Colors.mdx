@@ -1,0 +1,13 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import { colorTokens } from '../../../constants';
+
+<Meta title="Design System/Tokens/Colors" />
+
+# Colors
+
+<ColorPalette>
+  {Object.entries(colorTokens).map(([token, values]) => {
+    const title = token[0].toUpperCase() + token.slice(1);
+    return <ColorItem title={title} colors={values} />;
+  })}
+</ColorPalette>
