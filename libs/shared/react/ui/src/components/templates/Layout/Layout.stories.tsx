@@ -10,9 +10,27 @@ export default Story;
 
 export const Primary = {
   args: {
-    header: <Placeholder className="h-40" />,
-    main: <Placeholder className="h-full" />,
+    headerProps: {
+      logo: {
+        src: 'https://picsum.photos/300/200.webp',
+        alt: 'Random',
+      },
+      navigation: {
+        links: [
+          {
+            url: '',
+          },
+          {
+            url: '',
+          },
+          {
+            url: '',
+          },
+        ],
+      },
+    },
     footer: <Placeholder className="h-40" />,
+    children: <Placeholder className="h-full" />,
   },
   parameters: {
     design: {

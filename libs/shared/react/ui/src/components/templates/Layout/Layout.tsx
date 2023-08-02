@@ -1,19 +1,20 @@
 import { classnames } from '@atomic-design/shared/utils';
 import { ReactNode } from 'react';
+import { Header, HeaderProps } from '../../organisms';
 
 export interface LayoutProps {
-  header: ReactNode;
-  main: ReactNode;
+  headerProps: HeaderProps;
   footer: ReactNode;
+  children: ReactNode;
   className?: string;
 }
 
-export function Layout({ header, main, footer, className }: LayoutProps) {
+export function Layout({ headerProps, children, footer, className }: LayoutProps) {
   return (
     <div className={classnames([className, 'min-h-screen w-full grid grid-rows-layout gap-y-8'])}>
-      <header>{header}</header>
+      <Header {...headerProps} />
       <div className="w-full flex justify-center">
-        <main className="w-full max-w-7xl">{main}</main>
+        <main className="w-full max-w-7xl">{children}</main>
       </div>
       <footer>{footer}</footer>
     </div>

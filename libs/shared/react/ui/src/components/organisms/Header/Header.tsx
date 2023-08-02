@@ -11,12 +11,12 @@ export interface HeaderProps {
 
 export function Header({ logo, navigation, className }: HeaderProps) {
   return (
-    <div className={classnames([className, 'w-full h-20 bg-primary px-4 py-2 flex justify-center items-center'])}>
+    <header className={classnames([className, 'w-full h-20 bg-primary px-4 py-2 flex justify-center items-center'])}>
       <div className="w-full h-full max-w-7xl flex justify-between items-center">
         <Image {...logo} className="h-full w-40 object-cover" />
         <NavigationList {...navigation} />
       </div>
-    </div>
+    </header>
   );
 }
 
