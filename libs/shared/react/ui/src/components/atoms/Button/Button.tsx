@@ -4,7 +4,7 @@ export interface ButtonProps {
 
 export function Button({ label }: ButtonProps) {
   return (
-    <button className="py-4 px-8 bg-secondary dark:bg-primary rounded-full font-display font-bold">{label}</button>
+    <button className="py-4 px-8 bg-primary dark:bg-secondary rounded-full font-display font-bold">{label}</button>
   );
 }
 
